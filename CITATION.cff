@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using this metadata."
+title: "SemiconOps"
+version: 0.0.1
+type: software
+license: Apache-2.0
+authors:
+  - family-names: "To be filled"
+    given-names: "To be filled"

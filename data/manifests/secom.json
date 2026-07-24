@@ -1,0 +1,15 @@
+{
+  "dataset": "SECOM",
+  "uci_id": 179,
+  "source_url": "https://archive.ics.uci.edu/static/public/179/secom.zip",
+  "doi": "10.24432/C54305",
+  "license": "CC BY 4.0",
+  "downloaded_at_utc": "2026-07-24T11:34:09.429571+00:00",
+  "archive_size_bytes": 1964989,
+  "sha256": "eea568baf3c2229096d7d294cf0b096b5502bd96d92c0b80a65b84714059be8e",
+  "limitations": [
+    "Features are anonymous and must not be assigned process semantics.",
+    "Prediction and SHAP are not root-cause or causal proof.",
+    "Raw data is excluded from Git."
+  ]
+}

@@ -1,0 +1,7 @@
+project:
+  name: semiconops
+  seed: 2026
+truth_boundary:
+  anonymous_feature_semantics: forbidden
+  causal_claims: forbidden
+  automatic_root_cause: forbidden

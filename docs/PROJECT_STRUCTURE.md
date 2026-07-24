@@ -1,0 +1,29 @@
+# 项目结构说明
+
+- `src/semiconops/api`：HTTP 路由、请求响应和错误映射；不放模型训练逻辑。
+- `src/semiconops/core`：配置、日志、request_id、异常、安全和版本。
+- `src/semiconops/db`：数据库连接、Session、Base 和事务。
+- `src/semiconops/domain`：领域实体与领域无关接口，支撑后续跨域迁移。
+- `src/semiconops/models`：SQLAlchemy ORM 表模型。
+- `src/semiconops/schemas`：Pydantic 输入输出 Schema。
+- `src/semiconops/repositories`：数据库读写，不写业务判断。
+- `src/semiconops/services`：业务服务，组合数据、模型、策略和 Repository。
+- `src/semiconops/adapters`：SECOM/APS、风险模型、Embedding、LLM、证据源适配。
+- `src/semiconops/ml/data`：解析、Schema、切分和数据质量。
+- `src/semiconops/ml/features`：预处理 Pipeline。
+- `src/semiconops/ml/training`：Dummy、逻辑回归、树模型。
+- `src/semiconops/ml/evaluation`：指标、置信区间、校准、阈值和 Top-K。
+- `src/semiconops/ml/explainability`：SHAP 模型行为解释。
+- `src/semiconops/ml/similarity`：统计相似案例。
+- `src/semiconops/knowledge`：独立知识区，负责摄入、检索、引用和拒答。
+- `src/semiconops/workflows`：受控工作流、白名单工具、人工复核和停止条件。
+- `src/semiconops/evaluation`：模型、RAG、工作流和性能统一评测。
+- `ui`：Streamlit 页面，只调用 API，不直接加载模型或数据库。
+- `configs`：数据集、阈值、策略和领域配置，避免硬编码。
+- `data`：raw/interim/processed/external/manifests；真实数据默认不进 Git。
+- `artifacts`：模型、评测、报告和图表产物。
+- `tests`：unit/integration/contract/e2e 四层测试。
+- `scripts`：环境验收、数据下载、索引和报告脚本。
+- `infra`：Docker、PostgreSQL 初始化与部署配置。
+- `docs`：PRD、真实性边界、ADR、日志、架构图、Data/Model Card 和面试材料。
+- `.github/workflows`：CI。

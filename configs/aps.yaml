@@ -1,0 +1,5 @@
+dataset:
+  name: aps_failure_at_scania_trucks
+  uci_id: 421
+  feature_semantics: anonymous
+  purpose: migration_exercise_only

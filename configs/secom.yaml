@@ -1,0 +1,6 @@
+dataset:
+  name: secom
+  uci_id: 179
+  positive_label: 1
+  negative_label: -1
+  feature_semantics: anonymous
