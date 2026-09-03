@@ -1,6 +1,8 @@
 from fastapi import FastAPI
+
 from semiconops.api.routes.health import router as health_router
 from semiconops.core.config import get_settings
+
 
 def create_app() -> FastAPI:
     settings = get_settings()

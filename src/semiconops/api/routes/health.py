@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+
 from semiconops.core.config import get_settings
 
 router = APIRouter(tags=["system"])

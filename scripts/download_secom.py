@@ -1,6 +1,11 @@
 from __future__ import annotations
-import hashlib, json, shutil, urllib.request, zipfile
-from datetime import datetime, timezone
+
+import hashlib
+import json
+import shutil
+import urllib.request
+import zipfile
+from datetime import UTC, datetime
 from pathlib import Path
 
 URL = "https://archive.ics.uci.edu/static/public/179/secom.zip"
@@ -47,7 +52,7 @@ def main() -> None:
         "source_url": URL,
         "doi": DOI,
         "license": LICENSE,
-        "downloaded_at_utc": datetime.now(timezone.utc).isoformat(),
+        "downloaded_at_utc": datetime.now(UTC).isoformat(),
         "archive_size_bytes": ZIP_PATH.stat().st_size,
         "sha256": archive_hash,
         "limitations": [
