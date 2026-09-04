@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     database_url: str = "postgresql+psycopg://semiconops:change_me@localhost:5432/semiconops"
     model_config = SettingsConfigDict(env_file=".env", env_prefix="SEMICONOPS_", extra="ignore")
 
+
 @lru_cache
 def get_settings() -> Settings:
     return Settings()

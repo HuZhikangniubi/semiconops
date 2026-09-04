@@ -18,12 +18,14 @@ MANIFEST_DIR = ROOT / "data" / "manifests"
 ZIP_PATH = DOWNLOAD_DIR / "secom.zip"
 MANIFEST_PATH = MANIFEST_DIR / "secom.json"
 
+
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as file:
         for chunk in iter(lambda: file.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
 
 def main() -> None:
     DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
@@ -63,6 +65,7 @@ def main() -> None:
     }
     MANIFEST_PATH.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(manifest, ensure_ascii=False, indent=2))
+
 
 if __name__ == "__main__":
     main()
