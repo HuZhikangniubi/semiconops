@@ -18,7 +18,7 @@ dependencies = [
   "alembic>=1.16,<2",
   "pgvector>=0.4,<1",
   "structlog>=25.4,<26",
-  "numpy>=2.2,<3",
+  "numpy>=2.2,<2.5",
   "pandas>=2.3,<3",
   "scikit-learn>=1.7,<2",
   "scipy>=1.15,<2",
@@ -30,7 +30,12 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-ml = ["xgboost>=3.0,<4", "shap>=0.48,<1"]
+ml = [
+  "xgboost>=3.0,<4",
+  "shap>=0.48,<1",
+  "numba>=0.66,<0.67",
+  "llvmlite>=0.48,<0.49",
+]
 rag = ["pypdf>=5.8,<6", "beautifulsoup4>=4.13,<5", "lxml>=6,<7", "rank-bm25>=0.2.2,<1"]
 ui = ["streamlit>=1.47,<2", "plotly>=6.2,<7"]
 
